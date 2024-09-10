@@ -1,0 +1,106 @@
+﻿[
+  {
+    "outputFile": "wwwroot/scss/colors/mixins/mixins-colors.css",
+    "inputFile": "wwwroot/scss/colors/mixins/mixins-colors.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/colors/backgrounds.css",
+    "inputFile": "wwwroot/scss/colors/backgrounds.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/colors/base.css",
+    "inputFile": "wwwroot/scss/colors/base.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/colors/buttons.css",
+    "inputFile": "wwwroot/scss/colors/buttons.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/colors/colors.css",
+    "inputFile": "wwwroot/scss/colors/colors.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/colors/heading.css",
+    "inputFile": "wwwroot/scss/colors/heading.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/colors/links.css",
+    "inputFile": "wwwroot/scss/colors/links.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/colors/root.css",
+    "inputFile": "wwwroot/scss/colors/root.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/components/button.css",
+    "inputFile": "wwwroot/scss/components/button.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/components/container.css",
+    "inputFile": "wwwroot/scss/components/container.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/components/links.css",
+    "inputFile": "wwwroot/scss/components/links.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/components/typography.css",
+    "inputFile": "wwwroot/scss/components/typography.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/components/wrapper.css",
+    "inputFile": "wwwroot/scss/components/wrapper.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/components/components.css",
+    "inputFile": "wwwroot/scss/components/components.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/misc/base.css",
+    "inputFile": "wwwroot/scss/misc/base.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/misc/misc.css",
+    "inputFile": "wwwroot/scss/misc/misc.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/mixins/mixins-buttons.css",
+    "inputFile": "wwwroot/scss/mixins/mixins-buttons.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/mixins/mixins-content.css",
+    "inputFile": "wwwroot/scss/mixins/mixins-content.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/mixins/mixins-media.css",
+    "inputFile": "wwwroot/scss/mixins/mixins-media.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/mixins/mixins-typography.css",
+    "inputFile": "wwwroot/scss/mixins/mixins-typography.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/mixins/mixins.css",
+    "inputFile": "wwwroot/scss/mixins/mixins.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/sections/footer.css",
+    "inputFile": "wwwroot/scss/sections/footer.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/sections/header.css",
+    "inputFile": "wwwroot/scss/sections/header.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/sections/sections.css",
+    "inputFile": "wwwroot/scss/sections/sections.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/main.css",
+    "inputFile": "wwwroot/scss/main.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/theme.css",
+    "inputFile": "wwwroot/scss/theme.scss"
+  }
+]
