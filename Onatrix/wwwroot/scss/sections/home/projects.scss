@@ -1,0 +1,98 @@
+@import "../../mixins/mixins-media.scss";
+
+.our-projects {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include desktop {
+        padding-top: 260px;
+    }
+
+    .container {
+
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @include desktop {
+            display: block;
+        }
+    }
+
+    .project-flex {
+
+        @include desktop {
+            display: flex;
+            padding-top: 40px;
+        }
+
+        .box {
+            width: 100%;
+            position: relative;
+
+            @include desktop {
+                max-width: 480px;
+            }
+
+            img {
+                position: relative;
+            }
+
+            .info-opacity {
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                position: absolute;
+                z-index: 1;
+                padding: 25px 50px 20px 20px;
+                bottom: 0;
+
+                h5 {
+                    font-weight: 500;
+                    color: var(--color-light);
+                }
+
+                p {
+                    color: var(--color-light);
+                }
+            }
+
+            .info-primary {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: absolute;
+                z-index: 1;
+                bottom: 0;
+                padding: 35px 50px 35px 20px;
+                width: 100%;
+
+                .text {
+
+                    h5 {
+                        font-weight: 500;
+                        color: var(--color-secondary);
+                    }
+
+                    p {
+                        color: var(--color-light);
+                    }
+                }
+
+                .button {
+
+                    a {
+                        color: var(--color-light);
+                        text-decoration: none;
+                        font-size: 60px;
+                    }
+                }
+            }
+        }
+    }
+}

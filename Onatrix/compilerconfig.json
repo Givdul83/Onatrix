@@ -102,5 +102,37 @@
   {
     "outputFile": "wwwroot/scss/theme.css",
     "inputFile": "wwwroot/scss/theme.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/sections/home/brands.css",
+    "inputFile": "wwwroot/scss/sections/home/brands.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/sections/brands.css",
+    "inputFile": "wwwroot/scss/sections/brands.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/sections/home/clients.css",
+    "inputFile": "wwwroot/scss/sections/home/clients.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/sections/home/hero.css",
+    "inputFile": "wwwroot/scss/sections/home/hero.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/sections/home/ourservices.css",
+    "inputFile": "wwwroot/scss/sections/home/ourservices.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/sections/home/projects.css",
+    "inputFile": "wwwroot/scss/sections/home/projects.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/sections/home/story.css",
+    "inputFile": "wwwroot/scss/sections/home/story.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/sections/home/home.css",
+    "inputFile": "wwwroot/scss/sections/home/home.scss"
   }
 ]

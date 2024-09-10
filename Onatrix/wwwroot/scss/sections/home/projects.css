@@ -1,0 +1,109 @@
+﻿.container {
+  width: 100%;
+}
+@media (min-width: 720px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 720px) {
+  .projects-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1400px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.our-projects {
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 1400px) {
+  .our-projects {
+    padding-top: 260px;
+  }
+}
+@media (min-width: 720px) {
+  .our-projects .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (min-width: 1400px) {
+  .our-projects .container {
+    display: block;
+  }
+}
+@media (min-width: 1400px) {
+  .our-projects .project-flex {
+    display: flex;
+    padding-top: 40px;
+  }
+}
+.our-projects .project-flex .box {
+  width: 100%;
+  position: relative;
+}
+@media (min-width: 1400px) {
+  .our-projects .project-flex .box {
+    max-width: 480px;
+  }
+}
+.our-projects .project-flex .box img {
+  position: relative;
+}
+.our-projects .project-flex .box .info-opacity {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: 1;
+  padding: 25px 50px 20px 20px;
+  bottom: 0;
+}
+.our-projects .project-flex .box .info-opacity h5 {
+  font-weight: 500;
+  color: var(--color-light);
+}
+.our-projects .project-flex .box .info-opacity p {
+  color: var(--color-light);
+}
+.our-projects .project-flex .box .info-primary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  padding: 35px 50px 35px 20px;
+  width: 100%;
+}
+.our-projects .project-flex .box .info-primary .text h5 {
+  font-weight: 500;
+  color: var(--color-secondary);
+}
+.our-projects .project-flex .box .info-primary .text p {
+  color: var(--color-light);
+}
+.our-projects .project-flex .box .info-primary .button a {
+  color: var(--color-light);
+  text-decoration: none;
+  font-size: 60px;
+}

@@ -1,0 +1,22 @@
+@import "../../mixins/mixins-media.scss";
+
+.brands {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .container {
+        display: grid;
+        gap: 5px;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 20px 5px;
+
+        @include desktop {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 80px;
+            padding: 50px 0;
+        }
+    }
+}
