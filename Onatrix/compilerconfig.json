@@ -134,5 +134,9 @@
   {
     "outputFile": "wwwroot/scss/sections/home/home.css",
     "inputFile": "wwwroot/scss/sections/home/home.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/sections/home/aboutUs.css",
+    "inputFile": "wwwroot/scss/sections/home/aboutUs.scss"
   }
 ]
