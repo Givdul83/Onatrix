@@ -1,0 +1,227 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage;
+@{
+    Layout = "mainLayout.cshtml";
+    var heroBackgroundImage = Model?.Value<IPublishedContent>("heroBackgroundImage")?.Url() ?? "";
+    var aboutUsSignatureImage = Model?.Value<IPublishedContent>("aboutUsSignatureImage")?.Url() ?? "";
+    var serviceImage1 = Model?.Value<IPublishedContent>("cardOneImage")?.Url() ?? "";
+    var serviceImage2 = Model?.Value<IPublishedContent>("cardTwoImage")?.Url() ?? "";
+    var serviceImage3 = Model?.Value<IPublishedContent>("cardThreeImage")?.Url() ?? "";
+    var serviceImage4 = Model?.Value<IPublishedContent>("cardFourImage")?.Url() ?? "";
+    var serviceImage5 = Model?.Value<IPublishedContent>("cardFiveImage")?.Url() ?? "";
+    var serviceImage6 = Model?.Value<IPublishedContent>("cardSixImage")?.Url() ?? "";
+    var clientsBackgroundImage = Model?.Value<IPublishedContent>("clientsBackgroundImage")?.Url() ?? "";
+    var clientsImage = Model?.Value<IPublishedContent>("clientsImage")?.Url() ?? "";
+    var storyBackgroundImage = Model?.Value<IPublishedContent>("storyBackgroundImage")?.Url() ?? "";
+    var storyImage = Model?.Value<IPublishedContent>("storyImage")?.Url() ?? "";
+    var projectOneImage = Model?.Value<IPublishedContent>("projectOneImage")?.Url() ?? "";
+    var projectTwoImage = Model?.Value<IPublishedContent>("projectTwoImage")?.Url() ?? "";
+    var projectThreeImage = Model?.Value<IPublishedContent>("projectThreeImage")?.Url() ?? "";
+    var projectFourImage = Model?.Value<IPublishedContent>("projectFourImage")?.Url() ?? "";
+    var brandOne = Model?.Value<IPublishedContent>("brandOne")?.Url() ?? "";
+    var brandTwo = Model?.Value<IPublishedContent>("brandTwo")?.Url() ?? ""; 
+    var brandThree = Model?.Value<IPublishedContent>("brandThree")?.Url() ?? ""; 
+    var brandFour = Model?.Value<IPublishedContent>("brandFour")?.Url() ?? ""; 
+    var brandFive = Model?.Value<IPublishedContent>("brandFive")?.Url() ?? ""; 
+    var brandSix = Model?.Value<IPublishedContent>("brandSix")?.Url() ?? "";
+    ViewBag.Title = Model?.Value("pageTitle") ?? null;
+}
+ 
+<section class="hero bg-light">
+    <div class="image">
+        <img src="@heroBackgroundImage" alt="hero">
+    </div>
+ 
+    <div class="container">
+        <div class="hero-content">
+            <h1>@Model.Value("heroTitle")</h1>
+            <p>@Model.Value("heroText")</p>
+            <a href="@Model.Value("heroButtonUrl")" class="btn btn-primary">@Model.Value("heroButtonText")</a>
+        </div>
+    </div>
+</section>
+ <section class="about-us bg-light">
+    <div class="container">
+        <div class="content-left">
+            <h6>@Model.Value("aboutUsHeading")</h6>
+            <h2>@Model.Value("aboutUsTitle")</h2>
+            <p class="quote">@Model.Value("aboutUsQuote")</p>
+            <p> @Model.Value("aboutUsText")</p>
+            <img src="@aboutUsSignatureImage")" alt="signature">
+            <p>@Model.Value("aboutUsSignatureName")</p>
+        </div>
+ 
+        <div class="content-right bg-light">
+            <div class="title bg-primary">
+                <h3>@Model.Value("aboutUsFormTitle")</h3>
+            </div>
+ 
+            <div class="form-content">
+                <p>@Model.Value("aboutUsFormText")</p>
+ 
+                <form>
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Email address">
+                    <input type="text" placeholder="Phone">
+                    <select name="service" id="service">
+                        <option value="service">Financial consulting</option>
+                        <option value="service1">Service 1</option>
+                        <option value="service2">Service 2</option>
+                        <option value="service3">Service 3</option>
+                    </select>
+                    <a class=" btn btn-accent">@Model.Value("aboutUsFormButtonText")</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+ <section class="our-services bg-gray">
+    <div class="container">
+        <div class="heading">
+            <h6>@Model.Value("ourServicesHeading")</h6>
+            <h2>@Model.Value("ourServicesTitle")</h2>
+        </div>
+ 
+        <div class="projects-grid">
+            <div class="box">
+                <h5>@Model.Value("cardOneTitle")</h5>
+                <img src="@serviceImage1" alt="Risk Management">
+                <p class="text">@Model.Value("cardOneText")</p>
+            </div>
+ 
+            <div class="box">
+                <h5>@Model.Value("cardTwoTitle")</h5>
+                <img src="@serviceImage2" alt="Bonds & Commodities">
+                <p class="text">@Model.Value("cardTwoText")</p>
+            </div>
+ 
+            <div class="box">
+                <h5>@Model.Value("cardThreeTitle")</h5>
+                <img src="@serviceImage3" alt="Assurance & Audits">
+                <p class="text">@Model.Value("cardThreeText")</p>
+            </div>
+ 
+            <div class="box">
+                <h5>@Model.Value("cardFourTitle")</h5>
+                <img src="@serviceImage4" alt="Tax and Trusts">
+                <p class="text">@Model.Value("cardFourText")</p>
+            </div>
+ 
+            <div class="box">
+                <h5>@Model.Value("cardFiveTitle")</h5>
+                <img src="@serviceImage5" alt="Financial Advisor">
+                <p class="text">@Model.Value("cardFiveText")</p>
+            </div>
+ 
+           
+            <div class="box">
+                <h5>@Model.Value("cardSixTitle")</h5>
+                <img src="@serviceImage6" alt="Statistic Advisors">
+                <p class="text">@Model.Value("cardSixText")</p>
+            </div>
+        </div>
+    </div>
+</section>
+        <section class="clients bg-light">
+                <div class="container">
+                    <div class="content">
+                        <h2>@Model.Value("clientsTitle")<span>@Model.Value("clientsSecondTitle")</span></h2>
+                        <p>@Model.Value("clientsText")</p>
+                        <a class="btn btn-primary">@Model.Value("clientsButtonText")</a>
+                        <img class="backgroundImage" src="@clientsBackgroundImage" alt="clients">
+                        <img class="image" src="@clientsImage" alt="clients">
+                    </div>
+                </div>
+            </section>
+            <section class="story bg-primary">
+                <div class="container">
+                    <div class="heading">
+                        <h6>@Model.Value("storyHeading")</h6>
+                        <h2>@Model.Value("storyTitle")</h2>
+                    </div>
+ 
+                    <div class="story-content">
+                        <div class="story-flex">
+                            <div>
+                                <p class="number">@Model.Value("storyOneNumber")</p>
+                                <p class="content">@Model.Value("storyOneText")</p>
+                            </div>
+   
+                            <div>
+                                <p class="number">@Model.Value("storyTwoNumber")</p>
+                                <p class="content">@Model.Value("storyTwoText")</p>
+                            </div>
+   
+                            <div>
+                                <p class="number">@Model.Value("storyThreeNumber")</p>
+                                <p class="content">@Model.Value("storyThreeText")</p>
+                            </div>
+                        </div>
+                    </div>
+                    <img class="backgroundImage" src="@storyBackgroundImage" alt="story">
+ 
+                    <img class="image" src="@storyImage" alt="story">
+                </div>
+            </section>
+ <section class="our-projects">
+ 
+<div class="container">
+    <h6>@Model?.Value("projectsHeading")</h6>
+    <h2>@Model?.Value("projectsTitle")</h2>
+</div>
+ 
+<div class="project-flex">
+    <div class="box">
+        <img src="@projectOneImage" alt="our projects">
+ 
+        <div class="info-opacity bg-primary">
+            <h5>@Model?.Value("projectOneTitle")</h5>
+            <p class="text">@Model?.Value("projectOneText")</p>
+        </div>
+    </div>
+ 
+    <div class="box">
+        <img src="@projectTwoImage" alt="our projects">
+ 
+        <div class="info-primary bg-primary">
+ 
+            <div class="text">
+                <h5>@Model?.Value("projectTwoTitle")</h5>
+                <p class="text">@Model?.Value("projectTwoText")</p>
+            </div>
+ 
+            <div class="button">
+                <a><i class="fa-solid fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </div>
+ 
+    <div class="box">
+        <img src="@projectThreeImage" alt="our projects">
+ 
+        <div class="info-opacity bg-primary">
+            <h5>@Model?.Value("projectThreeTitle")</h5>
+            <p class="text">@Model?.Value("projectThreeText")</p>
+        </div>
+    </div>
+ 
+    <div class="box">
+        <img src="@projectFourImage" alt="our projects">
+ 
+        <div class="info-opacity bg-primary">
+            <h5>@Model?.Value("projectFourTitle")</h5>
+            <p class="text">@Model?.Value("projectFourText")</p>
+        </div>
+    </div>
+</div>
+</section>
+    <section class="brands">
+<div class="container">
+<img src="@brandOne" alt="freedombird">
+<img src="@brandTwo" alt="identity">
+<img src="@brandThree" alt="natural">
+<img src="@brandFour" alt="simpleaf">
+<img src="@brandFive" alt="globe">
+<img src="@brandSix" alt="fossilgroup">
+</div>
+</section>
