@@ -1,0 +1,67 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@using Umbraco.Cms.Core.Routing
+@using Umbraco.Extensions
+@using Umbraco.Cms.Web.Common.PublishedModels;
+
+
+@inject IPublishedUrlProvider PublishedUrlProvider
+@inject Umbraco.Cms.Web.Common.UmbracoHelper UmbracoHelper
+@*
+    This snippet makes a breadcrumb of parents using an unordered HTML list.
+
+    How it works:
+    - It uses the Ancestors() method to get all parents and then generates links so the visitor can go back
+    - Finally it outputs the name of the current page (without a link)
+*@
+
+@{ 
+    var selection = Model.Ancestors().ToArray();
+    var homePageDisplayName = "Home";
+    var isFirstItem = true;
+
+    var isHomePage = Model.Url(PublishedUrlProvider) == "/";
+    var rootContents = UmbracoHelper.ContentAtRoot();
+    var breadcrum = rootContents?.FirstOrDefault(x => x.ContentType.Alias == "breadcrum") ?? null;
+
+    var backgroundImageLeft = breadcrum?.Value<IPublishedContent>("backgroundImageLeft")?.Url() ?? "";
+    var backgroundImageRight = breadcrum?.Value<IPublishedContent>("backgroundImageRight")?.Url() ?? "";
+              
+}
+    }
+
+    @if(!isHomePage){
+
+            <section class="breadcrum-navigation">
+                
+                <div class="img">
+                        <img class="left" src="@backgroundImageLeft" alt="breadcrum-image-left">
+                        <img class="right" src="@backgroundImageRight" alt="breadcrum-image-right">
+                    </div>
+                <div class="container">
+
+                     
+
+                    <h2>@Model.Name</h2>
+
+        
+
+                    @if (selection?.Length > 0)
+                    {
+                          <div class="links">
+                        <div class="breadcrumb">
+                           
+                            @foreach (var item in selection.OrderBy(x => x.Level))
+                            {
+                                var nameToDisplay = isFirstItem ? homePageDisplayName : item.Name ;
+                                <div><a class="gray-link" href="@item.Url(PublishedUrlProvider)">@nameToDisplay</a></div>
+                                <p>></p>
+                            }
+
+                            
+                            <div class="active">@Model.Name</div>
+                        </div>
+                          </div>
+                    }
+        </div>
+        </section>
+    }

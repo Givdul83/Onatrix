@@ -138,5 +138,25 @@
   {
     "outputFile": "wwwroot/scss/sections/home/aboutUs.css",
     "inputFile": "wwwroot/scss/sections/home/aboutUs.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/sections/aboutUs/about-tina.css",
+    "inputFile": "wwwroot/scss/sections/aboutUs/about-tina.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/sections/aboutUs/our-experts.css",
+    "inputFile": "wwwroot/scss/sections/aboutUs/our-experts.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/sections/aboutUs/review-for-our.service.css",
+    "inputFile": "wwwroot/scss/sections/aboutUs/review-for-our.service.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/sections/aboutUs/about-us.css",
+    "inputFile": "wwwroot/scss/sections/aboutUs/about-us.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/sections/breadcrum.css",
+    "inputFile": "wwwroot/scss/sections/breadcrum.scss"
   }
 ]

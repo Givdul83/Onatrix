@@ -1,0 +1,40 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage;
+@{
+    var aboutUsSignatureImage = Model?.Value<IPublishedContent>("aboutUsSignatureImage")?.Url() ?? "";
+}
+<section class="about-us bg-light">
+    <div class="container">
+        <div class="content-left">
+            <h6>@Model.Value("aboutUsHeading")</h6>
+            <h2>@Model.Value("aboutUsTitle")</h2>
+            <p class="quote">@Model.Value("aboutUsQuote")</p>
+            <p> @Model.Value("aboutUsText")</p>
+            <img src="@aboutUsSignatureImage")" alt="signature">
+            <p>@Model.Value("aboutUsSignatureName")</p>
+        </div>
+ 
+        <div class="content-right bg-light">
+            <div class="title bg-primary">
+                <h3>@Model.Value("aboutUsFormTitle")</h3>
+            </div>
+ 
+            <div class="form-content">
+                <p>@Model.Value("aboutUsFormText")</p>
+ 
+                <form>
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Email address">
+                    <input type="text" placeholder="Phone">
+                    <select name="service" id="service">
+                        <option value="service">Financial consulting</option>
+                        <option value="service1">Service 1</option>
+                        <option value="service2">Service 2</option>
+                        <option value="service3">Service 3</option>
+                    </select>
+                    <a class=" btn btn-accent">@Model.Value("aboutUsFormButtonText")</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
