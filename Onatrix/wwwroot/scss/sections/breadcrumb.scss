@@ -1,7 +1,7 @@
 @import "../mixins/mixins-media.scss";
 @import "../../scss/colors/colors.scss";
 
-.breadcrum-navigation {
+.breadcrumb-navigation {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -60,7 +60,7 @@
             }
             
                .active{
-                    color:var(--color-accent);
+                    color:var(--color-secondary);
                 }
             
 

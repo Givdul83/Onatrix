@@ -158,5 +158,9 @@
   {
     "outputFile": "wwwroot/scss/sections/breadcrum.css",
     "inputFile": "wwwroot/scss/sections/breadcrum.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/sections/let-us-know.css",
+    "inputFile": "wwwroot/scss/sections/let-us-know.scss"
   }
 ]

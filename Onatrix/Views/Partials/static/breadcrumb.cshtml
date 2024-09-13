@@ -21,27 +21,28 @@
 
     var isHomePage = Model.Url(PublishedUrlProvider) == "/";
     var rootContents = UmbracoHelper.ContentAtRoot();
-    var breadcrum = rootContents?.FirstOrDefault(x => x.ContentType.Alias == "breadcrum") ?? null;
+    var breadcrumb = rootContents?.FirstOrDefault(x => x.ContentType.Alias == "breadcrumb") ?? null;
 
-    var backgroundImageLeft = breadcrum?.Value<IPublishedContent>("backgroundImageLeft")?.Url() ?? "";
-    var backgroundImageRight = breadcrum?.Value<IPublishedContent>("backgroundImageRight")?.Url() ?? "";
+    var backgroundImageLeft = breadcrumb?.Value<IPublishedContent>("backgroundImageLeft")?.Url() ?? "";
+    var backgroundImageRight = breadcrumb?.Value<IPublishedContent>("backgroundImageRight")?.Url() ?? "";
+    ViewBag.Title = Model?.Value("pageTitle") ?? null;
               
 }
     }
 
     @if(!isHomePage){
 
-            <section class="breadcrum-navigation">
+            <section class="breadcrumb-navigation">
                 
                 <div class="img">
-                        <img class="left" src="@backgroundImageLeft" alt="breadcrum-image-left">
-                        <img class="right" src="@backgroundImageRight" alt="breadcrum-image-right">
+                        <img class="left" src="@backgroundImageLeft" alt="breadcrumb-image-left">
+                        <img class="right" src="@backgroundImageRight" alt="breadcrumb-image-right">
                     </div>
                 <div class="container">
 
                      
 
-                    <h2>@Model.Name</h2>
+                    <h2>@Model.Value("pageTitle")</h2>
 
         
 
