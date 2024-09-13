@@ -1,12 +1,16 @@
 ﻿@using Umbraco.Cms.Web.Common.PublishedModels;
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage;
+@inject Umbraco.Cms.Web.Common.UmbracoHelper UmbracoHelper
 @{
-    var brandOne = Model?.Value<IPublishedContent>("brandOne")?.Url() ?? "";
-    var brandTwo = Model?.Value<IPublishedContent>("brandTwo")?.Url() ?? ""; 
-    var brandThree = Model?.Value<IPublishedContent>("brandThree")?.Url() ?? ""; 
-    var brandFour = Model?.Value<IPublishedContent>("brandFour")?.Url() ?? ""; 
-    var brandFive = Model?.Value<IPublishedContent>("brandFive")?.Url() ?? ""; 
-    var brandSix = Model?.Value<IPublishedContent>("brandSix")?.Url() ?? "";
+    var rootContents = UmbracoHelper.ContentAtRoot();
+
+    var homeBrands =rootContents?.FirstOrDefault(x => x.ContentType.Alias == "homePage") ?? null;
+    var brandOne = homeBrands?.Value<IPublishedContent>("brandOne")?.Url() ?? "";
+    var brandTwo = homeBrands?.Value<IPublishedContent>("brandTwo")?.Url() ?? ""; 
+    var brandThree = homeBrands?.Value<IPublishedContent>("brandThree")?.Url() ?? ""; 
+    var brandFour = homeBrands?.Value<IPublishedContent>("brandFour")?.Url() ?? ""; 
+    var brandFive = homeBrands?.Value<IPublishedContent>("brandFive")?.Url() ?? ""; 
+    var brandSix = homeBrands?.Value<IPublishedContent>("brandSix")?.Url() ?? "";
     
 }
 <section class="brands">

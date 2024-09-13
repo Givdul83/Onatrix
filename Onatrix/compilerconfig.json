@@ -162,5 +162,13 @@
   {
     "outputFile": "wwwroot/scss/sections/let-us-know.css",
     "inputFile": "wwwroot/scss/sections/let-us-know.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/sections/contact/contact.css",
+    "inputFile": "wwwroot/scss/sections/contact/contact.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/sections/contact/map.css",
+    "inputFile": "wwwroot/scss/sections/contact/map.scss"
   }
 ]

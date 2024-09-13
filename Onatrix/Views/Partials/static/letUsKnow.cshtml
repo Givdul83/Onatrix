@@ -1,6 +1,9 @@
 ﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@using Umbraco.Cms.Core.Routing;
+
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
 @inject Umbraco.Cms.Web.Common.UmbracoHelper UmbracoHelper
+@inject IPublishedUrlProvider PublishedUrlProvider
 @{
     var rootContents = UmbracoHelper.ContentAtRoot();
     var settings = rootContents?.FirstOrDefault(x => x.ContentType.Alias == "settings") ?? null;
@@ -19,8 +22,10 @@
     var emailTitle = letUsKnow?.Value<string>("emailTitle") ?? "";
     var letUsKnowTitle = letUsKnow?.Value<string>("letUsKnowTitle") ?? "";
 
+    var isContactPage = Model.Url(PublishedUrlProvider) == "/contact/";
+
 }
- <section class="about-project bg-gray">
+ <section class="about-project @(isContactPage ? "bg-light" : "bg-gray")">
                 <div class="container">
                     <div class="content-left">
                         <img class="image" src="@mainImage" alt="David Batra">
