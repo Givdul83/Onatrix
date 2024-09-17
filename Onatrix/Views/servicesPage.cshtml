@@ -4,5 +4,5 @@
 	Layout = "mainLayout.cshtml";
     ViewBag.Title = Model?.Value("pageTitle") ?? null;
 }
-
+@await Html.PartialAsync("static/serviceContent")
 @await Html.PartialAsync("static/letUsKnow")
