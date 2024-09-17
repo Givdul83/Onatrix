@@ -170,5 +170,9 @@
   {
     "outputFile": "wwwroot/scss/sections/contact/map.css",
     "inputFile": "wwwroot/scss/sections/contact/map.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/sections/service/single-service.css",
+    "inputFile": "wwwroot/scss/sections/service/single-service.scss"
   }
 ]

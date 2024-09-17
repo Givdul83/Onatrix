@@ -1,0 +1,57 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage;
+@{
+    var singleServiceImageOne = Model?.Value<IPublishedContent>("thumbnail")?.Url() ?? "";
+    
+}
+
+
+
+
+ <section class="service-details bg-light">
+                <div class="container">
+
+                    <div class="content">
+                        <nav>
+                            <div class="header-nav">
+                                <h4>About us</h4>
+                                <img src="./images/aboutusnavimage.svg" alt="About us nav image">
+                                <p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non </p>
+                            </div>
+
+                            <div class="box bg-primary">
+                                <h4>How can we help you?</h4>
+                                <p>online support 24/7, we are here to help you</p>
+
+                                <form>
+                                    <input type="email" placeholder="Email address">
+                                    <button><i class="fa-regular fa-envelope"></i></button>
+                                </form>
+                            </div>
+                        </nav>
+
+                     
+                        <div class="info">
+                       
+                            <img class="imgOne" src="@singleServiceImageOne" alt="Risk Management Image 1">
+
+                           
+                                <p>@Model.Value("serviceContentTop")</p>
+                            
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-form">
+                        <h3>Have a question ?</h3>
+
+                        <form action="#">
+                            <input class="name" type="text" placeholder="Name">
+                            <input class="email" type="email" placeholder="Email">
+                            <textarea class="text" placeholder="Question"></textarea>
+                            <button class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
