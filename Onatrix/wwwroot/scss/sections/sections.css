@@ -6155,7 +6155,7 @@ h6 {
 }
 @media (min-width: 1400px) {
   .service-details .container .content .info .imgOne {
-    width: auto;
+    width: 100%;
   }
 }
 .service-details .container .content .info h3 {

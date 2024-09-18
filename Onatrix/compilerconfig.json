@@ -174,5 +174,9 @@
   {
     "outputFile": "wwwroot/scss/sections/service/single-service.css",
     "inputFile": "wwwroot/scss/sections/service/single-service.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/sections/service/service.css",
+    "inputFile": "wwwroot/scss/sections/service/service.scss"
   }
 ]

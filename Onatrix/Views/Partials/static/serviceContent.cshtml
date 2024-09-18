@@ -33,7 +33,7 @@
  
         <div class="projects-grid">                  
             @foreach (var item in selection){
-                var title = item?.Value<string>("title") ?? "";
+                var title = item?.Value<string>("pageTitle") ?? "";
                 var thumbnail = item?.Value<IPublishedContent>("thumbnail")?.Url() ?? "";
                 var description = item?.Value<string>("description") ?? "";                        
                
