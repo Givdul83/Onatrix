@@ -26,11 +26,21 @@ header {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                transition: ease-in-out 0.3s;
 
                 a {
                     color: var(--color-light);
                     padding-left: 10px;
                     padding-right: 10px;
+
+                    &[target="_blank"]::after {
+                        content: none;
+                    }
+
+                    &:hover {
+                        color: var(--color-accent);
+                        transform: scale(1.05);
+                    }
                 }
 
                 .facebook {

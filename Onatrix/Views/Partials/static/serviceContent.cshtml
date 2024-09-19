@@ -31,7 +31,7 @@
             }
         </div>
  
-        <div class="projects-grid">                  
+        <div class="projects-grid fade">                  
             @foreach (var item in selection){
                 var title = item?.Value<string>("pageTitle") ?? "";
                 var thumbnail = item?.Value<IPublishedContent>("thumbnail")?.Url() ?? "";

@@ -134,6 +134,16 @@
 .about-us .container .content-left img {
   margin-bottom: 5px;
 }
+.about-us .container .content-left .fade {
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+.about-us .container .content-left .fade.visible {
+  opacity: 1;
+}
+.about-us .container .content-left .fade.hidden {
+  opacity: 0;
+}
 .about-us .container .content-left p {
   font-size: 10px;
 }
@@ -1437,6 +1447,16 @@ h6 {
 }
 .our-services .container .projects-grid a .box .text:hover {
   color: var(--color-secondary);
+}
+.our-services .container .fade {
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+.our-services .container .fade.visible {
+  opacity: 1;
+}
+.our-services .container .fade.hidden {
+  opacity: 0;
 }
 
 .container {
