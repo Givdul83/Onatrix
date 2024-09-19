@@ -32,7 +32,7 @@
                 			var expertImage = item?.Value<IPublishedContent>("expertImage")?.Url() ?? "";
                 			var expertJobTitle = item?.Value<string>("expertJobTitle") ?? "";
 
-							<div class="expert-big">
+							<div class="expert-big rotate">
                                 <img src="@expertImage" alt="@expertName">
                                 <h4>@expertName</h4>
                                 <p>@expertJobTitle</p>
@@ -47,7 +47,7 @@
                 				var expertImage = item?.Value<IPublishedContent>("expertImage")?.Url() ?? "";
                 				var expertJobTitle = item?.Value<string>("expertJobTitle") ?? "";
 
-								<div class="expert-small">
+								<div class="expert-small rotate">
 									<img src="@expertImage" alt="@expertName">
                                 	<h4>@expertName</h4>
                                 	<p>@expertJobTitle</p>
