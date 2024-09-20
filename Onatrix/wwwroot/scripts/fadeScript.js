@@ -24,3 +24,16 @@
     window.addEventListener('scroll', onScroll);
     onScroll();
 }
+// basic css for this script
+// .fade {
+//    opacity: 0;
+//    transition: opacity 2s ease -in -out;
+//}
+
+//        .fade.visible {
+//    opacity: 1;
+//}
+
+//        .fade.hidden {
+//    opacity: 0;
+//}

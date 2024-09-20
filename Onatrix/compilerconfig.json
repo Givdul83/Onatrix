@@ -178,5 +178,13 @@
   {
     "outputFile": "wwwroot/scss/sections/service/service.css",
     "inputFile": "wwwroot/scss/sections/service/service.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/sections/project/project-section.css",
+    "inputFile": "wwwroot/scss/sections/project/project-section.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/sections/project/project.css",
+    "inputFile": "wwwroot/scss/sections/project/project.scss"
   }
 ]
