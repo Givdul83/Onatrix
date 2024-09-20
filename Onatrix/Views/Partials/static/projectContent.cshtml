@@ -24,11 +24,11 @@
                     <div class="content-left">
                         @foreach(var item in selection)
                         {
-                            var title = item?.Value<string>("projectTitle") ?? "";
-                            var date = item?.Value<string>("projectDate") ?? "";   
+                            var title = item?.Value<string>("pageTitle") ?? "";
+                            var date = item?.Value<DateTime>("projectDate").ToString("MMMM dd, yyyy") ?? "";
                             var thumbnail = item?.Value<IPublishedContent>("thumbnail")?.Url() ?? "";
                             var description = item?.Value<string>("projectDescription") ?? "";  
-                            <div class="article">
+                            <a href="@item.Url()" class="article">
                                 
                                 <img src="@thumbnail" alt="article-image">
                             
@@ -38,7 +38,7 @@
                                         <p>@description</p>
                                         <h6>Read more <span><i class="fa-solid fa-arrow-right"></i></span></h6>
                                     </div>
-                            </div>
+                            </a>
 
                         <hr>
 

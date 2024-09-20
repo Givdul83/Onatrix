@@ -4,7 +4,7 @@ a {
     display: inline-block;
     @include text;
     font-size: 1em;
-    text-decoration: underline;
+ 
 
     &:hover {
         text-decoration: none;
