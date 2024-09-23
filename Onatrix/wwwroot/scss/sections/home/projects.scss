@@ -57,6 +57,7 @@
 
                 &:hover {
                     background-color: var(--color-primary);
+                    transform: scaleY(1.15);
 
                     h5 {
                         color: var(--color-secondary);
@@ -85,8 +86,6 @@
                     font-size: 60px;
                     align-self: end;
                     opacity: 0;
-
-                    
                 }
             }
         }
