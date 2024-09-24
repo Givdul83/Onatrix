@@ -167,6 +167,9 @@
 }
 .projects-content .container .content-right nav .buttons {
   grid-area: buttons;
+  display: grid;
+  grid-template-columns: max-content max-content;
+  gap: 10px;
 }
 @media (min-width: 1400px) {
   .projects-content .container .content-right nav .buttons {
@@ -175,7 +178,6 @@
 }
 .projects-content .container .content-right nav .buttons div {
   display: flex;
-  gap: 20px;
 }
 .projects-content .container .content-right nav .buttons .btn-light {
   margin-top: 10px;
@@ -203,15 +205,23 @@
     max-width: 350px;
   }
 }
+.projects-content .container .content-right nav .box h5 {
+  padding-top: 1rem;
+  color: var(--color-accent);
+  align-self: start;
+}
 .projects-content .container .content-right nav .box img {
   position: relative;
+  right: -20px;
   z-index: 0;
+  align-self: end;
+  transform: rotate(-20deg);
+  transform-origin: top right;
 }
 .projects-content .container .content-right nav .box form {
   display: flex;
-  width: 100%;
+  width: 90%;
   position: absolute;
-  max-width: 260px;
   bottom: 30px;
 }
 .projects-content .container .content-right nav .box form input {

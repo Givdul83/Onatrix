@@ -153,6 +153,9 @@
 
                 .buttons {
                     grid-area: buttons;
+                    display: grid;
+                    grid-template-columns: max-content max-content;
+                    gap: 10px;
 
                     @include desktop {
                         margin-bottom: 9rem;
@@ -160,7 +163,6 @@
 
                     div {
                         display: flex;
-                        gap: 20px;
                     }
 
                     .btn-light {
@@ -190,17 +192,29 @@
                         max-width: 350px;
                     }
 
+                    h5 {
+                        padding-top:1rem;
+                        color: var(--color-accent);
+                        align-self:start;
+                    }
+
                     img {
-                        position: relative;
+                        position:relative;
+                        right: -20px;
                         z-index: 0;
+                        align-self: end;
+                        transform: rotate(-20deg);
+                        transform-origin:top right;
                     }
 
                     form {
                         display: flex;
-                        width: 100%;
+                        width: 90%;
                         position: absolute;
-                        max-width: 260px;
+                       
                         bottom: 30px;
+
+
 
                         input {
                             display: flex;
