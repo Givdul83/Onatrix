@@ -9,6 +9,53 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="compilerconfig.json" />
+    <Content Include="wwwroot\media\uaojpkg2\backgroundform.svg" />
+    <Content Include="wwwroot\media\1geo1qie\storiesmap.svg" />
+    <Content Include="wwwroot\media\1gofzv5r\brandfossilgroup.svg" />
+    <Content Include="wwwroot\media\20negnog\servicecard-2.svg" />
+    <Content Include="wwwroot\media\2omjtrg5\projectthumbnail-3.svg" />
+    <Content Include="wwwroot\media\2qwnrvcz\backgrounddots.svg" />
+    <Content Include="wwwroot\media\2tcpizki\singleservice-1.svg" />
+    <Content Include="wwwroot\media\c1ojsxtg\clientsimage.svg" />
+    <Content Include="wwwroot\media\cp5owvaq\servicecard-1.svg" />
+    <Content Include="wwwroot\media\cpwpyhrw\project-3.svg" />
+    <Content Include="wwwroot\media\cvknwrwn\expertkevingardner.svg" />
+    <Content Include="wwwroot\media\d4nlentz\brandnatural.svg" />
+    <Content Include="wwwroot\media\dh3ffu3m\letusknowimage.svg" />
+    <Content Include="wwwroot\media\djwfbxec\project-2.svg" />
+    <Content Include="wwwroot\media\eszezi1e\expertajcarter.svg" />
+    <Content Include="wwwroot\media\ewtemy0q\kevin-gardner.svg" />
+    <Content Include="wwwroot\media\ewxmibnw\brandidentity.svg" />
+    <Content Include="wwwroot\media\g1tp5u1f\expertbrandonkerr.svg" />
+    <Content Include="wwwroot\media\gxtbh5fo\tinafoxsignature.svg" />
+    <Content Include="wwwroot\media\inqjshm2\clientsmap.svg" />
+    <Content Include="wwwroot\media\intni55i\project-1.svg" />
+    <Content Include="wwwroot\media\ko2nsmdd\brandfreedom.svg" />
+    <Content Include="wwwroot\media\kvwlu3kl\topbackroundleft.svg" />
+    <Content Include="wwwroot\media\l4qmcp2h\servicecard-4.svg" />
+    <Content Include="wwwroot\media\ln1ayy1e\project-4.svg" />
+    <Content Include="wwwroot\media\lqup2ljv\expertbrandonnewton.svg" />
+    <Content Include="wwwroot\media\nwglqvge\herobackgroundimage.svg" />
+    <Content Include="wwwroot\media\omdbrqlc\projectthumbnail-1.svg" />
+    <Content Include="wwwroot\media\pfgnwbpu\servicecard-3.svg" />
+    <Content Include="wwwroot\media\po1lwvac\expertmirandadayton.svg" />
+    <Content Include="wwwroot\media\pvtpamok\expertaaronlambert.svg" />
+    <Content Include="wwwroot\media\quamc4av\projectthumbnail-2.svg" />
+    <Content Include="wwwroot\media\rg3by4pr\project-4.svg" />
+    <Content Include="wwwroot\media\rxdauehc\singleservicestaticleft.svg" />
+    <Content Include="wwwroot\media\sz5fkxf5\brandglobe.svg" />
+    <Content Include="wwwroot\media\t2wlultg\topbackgroundright.svg" />
+    <Content Include="wwwroot\media\tybmwkxe\brandsimleaf.svg" />
+    <Content Include="wwwroot\media\tzwhpzwi\servicecard-5.svg" />
+    <Content Include="wwwroot\media\u3zmiqi2\projectssubimage-1.svg" />
+    <Content Include="wwwroot\media\uc5hxnhy\tinafoxpicture.svg" />
+    <Content Include="wwwroot\media\uh5pqpl2\projectsubimage-2.svg" />
+    <Content Include="wwwroot\media\ut1ppryd\experttinafox.svg" />
+    <Content Include="wwwroot\media\v5vdjmxw\onatrixlogobrand.svg" />
+    <Content Include="wwwroot\media\vrpbgfr1\storyimage.svg" />
+    <Content Include="wwwroot\media\w2qdhypb\backgroundshape.svg" />
+    <Content Include="wwwroot\media\w5dljwpt\servicecard-6.svg" />
+    <Content Include="wwwroot\media\wbybob2f\projectthumbnail-4.svg" />
   </ItemGroup>
 
   <ItemGroup>

@@ -2,19 +2,37 @@
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage;
 @using Umbraco.Cms.Core.Routing;
 @inject IPublishedUrlProvider PublishedUrlProvider;
+@inject Umbraco.Cms.Web.Common.UmbracoHelper UmbracoHelper
  
  
 @{
-  var content = Umbraco.Content(Guid.Parse("2d9105f4-07c4-439f-9349-d851cbef3b69"));
-  var selection = Enumerable.Empty<IPublishedContent>();
+    var rootContents = UmbracoHelper.ContentAtRoot();
+    var projectStaticRight= rootContents?.FirstOrDefault(x => x.ContentType.Alias == "projectStaticRight") ?? null;
+
+    var tagsTitle = projectStaticRight?.Value<string>("tagsTitle") ?? "";
+    
+    var tags = projectStaticRight?.Value<IEnumerable<string>>("tags") ?? Enumerable.Empty<string>();
+
+    var formTitle = projectStaticRight?.Value<string>("formTitle") ?? "";
+    var formText = projectStaticRight?.Value<string>("formText") ?? "";
+    var formPlaceholderText = projectStaticRight?.Value<string>("formPlaceholderText") ?? "";
+
+
+    var formImage = projectStaticRight?.Value<IPublishedContent>("formImage")?.Url() ?? "";
+
+
+    var content = Umbraco.Content(Guid.Parse("2d9105f4-07c4-439f-9349-d851cbef3b69"));
+    var selection = Enumerable.Empty<IPublishedContent>();
    
+    
+
     if (content != null)
     {
         selection = content.ChildrenOfType("projectItemTemplate").Where(x => x.IsVisible());
+        
     }
     
 }
-
 
 
 
@@ -57,33 +75,25 @@
 
                     <div class="content-right">
                         <nav>
-                            <h4>Tags</h4>
+                            <h4>@tagsTitle</h4>
 
                             <div class="buttons">
+                                 @foreach(var tag in tags)
+                                    {
+                               
                                 <div>
-                                    <a href="#" class="btn btn-light report">Report</a>
-                                    <a href="#" class="btn btn-light busines-plans">Busines plans</a>
-                                </div>
-
-                                <div>
-                                    <a href="#" class="btn btn-light insights">Insights</a>
-                                    <a href="#" class="btn btn-light business">Business</a>
-                                    <a href="#" class="btn btn-light app">App</a>
-                                </div>
-
-                                <div>
-                                    <a href="#" class="btn btn-light project">Project</a>
-                                    <a href="#" class="btn btn-light finance">Finance</a>
-                                </div>
-
-                                <a href="#" class="btn btn-light pricing">Pricing</a>
+                                    <a href="#" class="btn btn-light">@tag</a>
+                                   
+                                 </div>
+                                     }
                             </div>
 
                             <div class="box">
-                                <img src="./images/supportboximage.svg" alt="support-box-background-image">
-
+                                <img src="@formImage" alt="support-box-background-image">
+                                <h5>@formTitle</h5>
+                                <p>@formText</p>
                                 <form>
-                                    <input type="email" placeholder="Email address">
+                                    <input type="email" placeholder="@formPlaceholderText">
                                     <button><i class="fa-regular fa-envelope"></i></button>
                                 </form>
                             </div>
@@ -91,3 +101,6 @@
                     </div>
                 </div>
             </section>
+
+
+
