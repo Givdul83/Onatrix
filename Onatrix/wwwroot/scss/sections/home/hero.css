@@ -44,6 +44,16 @@
     width: auto;
   }
 }
+.hero .fade {
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+.hero .fade.visible {
+  opacity: 1;
+}
+.hero .fade.hidden {
+  opacity: 0;
+}
 .hero .container .hero-content {
   display: flex;
   justify-content: center;
