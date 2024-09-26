@@ -1318,10 +1318,20 @@ h6 {
   display: flex;
   gap: 10px;
 }
-.service-details .container .content .info .points .point i {
+.service-details .container .content .info .points .point span {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background-color: var(--color-accent);
+  border-radius: 50%;
   margin-top: 7px;
-  color: var(--color-accent);
-  font-size: 0.3rem;
+}
+.service-details .container .content .info .points .point span .circles {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background-color: var(--color-accent);
+  border-radius: 50%;
 }
 .service-details .container .content .info .points .point p {
   font-size: 14px;

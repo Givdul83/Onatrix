@@ -21,14 +21,14 @@
     <h6>@Model?.Value("projectsHeading")</h6>
     <h2>@Model?.Value("projectsTitle")</h2>
 </div>
- 
-<div class="project-flex">
+
+    <div class="project-flex">
     @foreach(var item in selection)
         {
         var title = item?.Value<string>("pageTitle") ?? "";
         var thumbnail = item?.Value<IPublishedContent>("projectHomeImage")?.Url() ?? "";
         var financial = item?.Value<string>("projectFinancial") ?? "";  
-        <a href="@item.Url()" class="box">
+            <a href="@item.Url()" class="box rotate">
         
             <img src="@thumbnail" alt="our projects">
     

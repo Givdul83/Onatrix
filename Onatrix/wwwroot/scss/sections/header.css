@@ -89,6 +89,10 @@ header .header-nav .container {
 header .header-nav .container img {
   grid-area: img;
   padding-left: 30px;
+  transition: ease-in-out 0.3s;
+}
+header .header-nav .container img:hover {
+  transform: scale(1.05);
 }
 @media (min-width: 720px) {
   header .header-nav .container img {

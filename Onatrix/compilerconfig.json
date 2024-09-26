@@ -186,5 +186,9 @@
   {
     "outputFile": "wwwroot/scss/sections/project/project.css",
     "inputFile": "wwwroot/scss/sections/project/project.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/sections/project/single-project.css",
+    "inputFile": "wwwroot/scss/sections/project/single-project.scss"
   }
 ]

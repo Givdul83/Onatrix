@@ -34,7 +34,7 @@
   align-items: center;
 }
 .hero .image img {
-  width: 100%;
+  width: 90%;
 }
 @media (min-width: 1400px) {
   .hero .image img {

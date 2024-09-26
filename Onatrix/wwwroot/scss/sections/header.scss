@@ -76,6 +76,11 @@ header {
             img {
                 grid-area: img;
                 padding-left: 30px;
+                transition: ease-in-out 0.3s;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
 
                 @include tablet {
                     padding: 0;

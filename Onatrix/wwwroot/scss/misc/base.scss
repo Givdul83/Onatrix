@@ -17,6 +17,7 @@
 html, body, div, header, footer, main, aside, nav, blockquote {
     margin: 0;
     padding: 0;
+   
 }
 
 img, svg {
@@ -27,4 +28,5 @@ body {
     @include text;
     font-size: 16px;
     color: #535656;
+    
 }
