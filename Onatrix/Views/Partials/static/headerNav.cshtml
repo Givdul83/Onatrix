@@ -6,44 +6,21 @@
 @inject Umbraco.Cms.Web.Common.UmbracoHelper UmbracoHelper
 @inject IPublishedValueFallback PublishedValueFallback
 @inject IPublishedUrlProvider PublishedUrlProvider
-@{
-    var rootContents = UmbracoHelper.ContentAtRoot();
+@*
+    This snippet displays a list of links of the pages immediately under the top-most page in the content tree.
+    This is the home page for a standard website.
+    It also highlights the current active page/section in the navigation with the CSS class "current".
+*@
+
+@{ 
+     var rootContents = UmbracoHelper.ContentAtRoot();
     var settings = rootContents?.FirstOrDefault(x => x.ContentType.Alias == "settings") ?? null;
     var officeLocation = settings?.Value<string>("officeLocation") ?? "";
     var siteName = settings?.Value<string>("siteName") ?? "";
     var siteLogotype = settings?.Value<IPublishedContent>("siteLogotype")?.Url() ?? "";      
 
     var selection = Model.Root().Children.Where(x => x.IsVisible(PublishedValueFallback)).ToArray(); 
-}
- 
-<header>
-    <div class="header-top-info bg-primary">
-    <div class="container">
-        <p>@officeLocation</p>
-            <div class="social-media">
-                <a class="facebook" href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                <a class="twitter" href=" https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                <a class="linked-in" href=" https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-            </div>
-    </div>
-    </div>
- 
-   @* <div class="header-nav bg-light">
-    <div class="container">
-        <a href="/">
-        <img src="@siteLogotype" alt="@siteName">
-        </a>
-        <nav>
-            <a href="/about/">About</a>
-            <a href="/our-services/">Services</a>
-            <a href="/projects/">Projects</a>
-            <a href="/contact/">Contact</a>
-        </nav>
-        <button class="search"><i class="fa-solid fa-magnifying-glass"></i></button>
-    </div>
-    </div>*@
-     
-    
+    }
 
 
  <div class="header-nav bg-light">
@@ -59,7 +36,9 @@
                 {
                 <a class="@(item.IsAncestorOrSelf(Model) ? "head-link-active" : "head-link")" href="@item.Url(PublishedUrlProvider)" title="@item.Name">@item.Name</a>
                 
-                }                               
+             }
+                
+                
             }
             
         </nav>
@@ -67,4 +46,3 @@
     </div>
 </div>
 
-</header>

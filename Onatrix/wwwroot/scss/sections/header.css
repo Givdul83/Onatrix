@@ -99,27 +99,33 @@ header .header-nav .container img:hover {
     padding: 0;
   }
 }
-header .header-nav .container nav {
+header .header-nav .container .head-nav {
   grid-area: nav;
 }
-header .header-nav .container nav a {
+header .header-nav .container .head-nav .head-link {
   color: var(--color-primary);
   text-decoration: none;
   font-weight: 700;
   font-size: 1rem;
   margin: 10px 10px 0 10px;
-}
-header .header-nav .container nav a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 @media (min-width: 720px) {
-  header .header-nav .container nav a {
+  header .header-nav .container .head-nav .head-link {
     margin-left: 20px;
     margin-right: 20px;
   }
 }
-header .header-nav .container nav .active {
+header .header-nav .container .head-nav .head-link:hover {
+  color: var(--color-accent);
+}
+header .header-nav .container .head-nav .head-link-active {
   color: var(--color-secondary);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  margin: 10px 10px 0 10px;
+  text-decoration: none;
 }
 header .header-nav .container .search {
   display: flex;
