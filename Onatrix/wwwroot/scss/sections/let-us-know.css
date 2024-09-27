@@ -1225,6 +1225,16 @@ h6 {
   top: 30px;
   right: -50px;
 }
+.about-project .container .content-left .fade {
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+.about-project .container .content-left .fade.visible {
+  opacity: 1;
+}
+.about-project .container .content-left .fade.hidden {
+  opacity: 0;
+}
 @media (min-width: 1400px) {
   .about-project .container .content-right {
     max-width: 470px;

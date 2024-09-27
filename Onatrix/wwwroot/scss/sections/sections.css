@@ -5941,6 +5941,16 @@ h6 {
   top: 30px;
   right: -50px;
 }
+.about-project .container .content-left .fade {
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+.about-project .container .content-left .fade.visible {
+  opacity: 1;
+}
+.about-project .container .content-left .fade.hidden {
+  opacity: 0;
+}
 @media (min-width: 1400px) {
   .about-project .container .content-right {
     max-width: 470px;
@@ -7417,7 +7427,7 @@ h6 {
 }
 @media (min-width: 1400px) {
   .service-details .container .content .info p {
-    padding-right: 90px;
+    padding-right: 80px;
   }
 }
 .service-details .container .content .info .points .point {
@@ -7426,21 +7436,22 @@ h6 {
 }
 .service-details .container .content .info .points .point span {
   display: inline-block;
-  width: 7px;
+  min-width: 7px;
   height: 7px;
-  background-color: var(--color-accent);
+  background-color: var(--color-secondary);
   border-radius: 50%;
   margin-top: 7px;
 }
 .service-details .container .content .info .points .point span .circles {
   display: inline-block;
-  width: 7px;
-  height: 7px;
-  background-color: var(--color-accent);
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-secondary);
   border-radius: 50%;
 }
 .service-details .container .content .info .points .point p {
   font-size: 14px;
+  padding-right: 0;
 }
 .service-details .container .content .info .imgTwo {
   width: 90%;

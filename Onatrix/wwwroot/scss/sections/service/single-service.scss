@@ -145,7 +145,7 @@
                     font-size: 14px;
 
                     @include desktop {
-                        padding-right: 90px;
+                        padding-right: 80px;
                     }
                 }
 
@@ -153,28 +153,30 @@
 
                     .point {
                         display: flex;
-                        gap: 10px;
+                       gap:10px;
 
                         span {
                             display: inline-block;
-                            width: 7px;
+                            min-width: 7px;
                             height: 7px;
-                            background-color: var(--color-accent);
+                            background-color: var(--color-secondary);
                             border-radius: 50%;
                             margin-top: 7px;
+                            
 
 
                             .circles {
                                 display: inline-block;
-                                width: 7px;
-                                height: 7px;
-                                background-color: var(--color-accent);
+                                width: 6px;
+                                height: 6px;
+                                background-color: var(--color-secondary);
                                 border-radius: 50%;
                             }
                         }
 
                         p {
                             font-size: 14px;
+                            padding-right: 0;
                         }
                     }
                 }
