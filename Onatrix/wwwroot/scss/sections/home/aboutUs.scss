@@ -24,11 +24,7 @@
             h6 {
                 color: var(--color-secondary);
             }
-            // .about-us-quote {
-            //     font-size: 20px;
-            //     font-weight: 300;
-            //     font-style: italic;
-            // }
+
 
             img {
                 margin-bottom: 5px;
@@ -88,14 +84,12 @@
                     }
                 }
 
-                form {
+
+                .input-form-group {
                     display: flex;
                     flex-direction: column;
                     gap: 10px;
-
-                    @include desktop {
-                        gap: 20px;
-                    }
+                    padding-bottom: 10px;
 
                     input {
                         padding: 20px 10px;
@@ -110,20 +104,39 @@
                         }
                     }
 
-                    select {
-                        padding: 20px 10px;
-                        border: 1px solid #9C9EA6;
-                        color: #535656;
-                        outline: none;
-                    }
+                    span.form-input-error {
+                        display: none;
+                        }
 
-                    a {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                    }
+
+                        span.form-input-error.form-invalid-input {
+                            display: block;
+                            color: red;
+                        }
+                   
+                }
+
+
+                select {
+                    width: 100%;
+                    padding: 20px 10px;
+                    border: 1px solid #9C9EA6;
+                    color: #535656;
+                    outline: none;
+                    margin-bottom: 10px;
+                }
+
+                button {
+                    padding-top: 10px;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                 }
             }
         }
     }
 }
+
+    
+

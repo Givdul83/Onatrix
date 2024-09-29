@@ -102,34 +102,41 @@
     font-size: 13px;
   }
 }
-.about-us .container .content-right .form-content form {
+.about-us .container .content-right .form-content .input-form-group {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  padding-bottom: 10px;
 }
-@media (min-width: 1400px) {
-  .about-us .container .content-right .form-content form {
-    gap: 20px;
-  }
-}
-.about-us .container .content-right .form-content form input {
+.about-us .container .content-right .form-content .input-form-group input {
   padding: 20px 10px;
   border: 1px solid #9C9EA6;
   color: var(--color-dark);
   outline: none;
 }
-.about-us .container .content-right .form-content form input::placeholder {
+.about-us .container .content-right .form-content .input-form-group input::placeholder {
   font-size: 13px;
   color: #9C9EA6;
   font-style: italic;
 }
-.about-us .container .content-right .form-content form select {
+.about-us .container .content-right .form-content .input-form-group span.form-input-error {
+  display: none;
+}
+.about-us .container .content-right .form-content .input-form-group span.form-input-error.form-invalid-input {
+  display: block;
+  color: red;
+}
+.about-us .container .content-right .form-content select {
+  width: 100%;
   padding: 20px 10px;
   border: 1px solid #9C9EA6;
   color: #535656;
   outline: none;
+  margin-bottom: 10px;
 }
-.about-us .container .content-right .form-content form a {
+.about-us .container .content-right .form-content button {
+  padding-top: 10px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
