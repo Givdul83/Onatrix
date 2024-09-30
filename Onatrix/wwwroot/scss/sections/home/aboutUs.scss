@@ -84,28 +84,64 @@
                     }
                 }
 
+                #aboutUsForm {
 
-                .input-form-group {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 10px;
-                    padding-bottom: 10px;
 
-                    input {
+                    input, select {
                         padding: 20px 10px;
                         border: 1px solid #9C9EA6;
                         color: var(--color-dark);
                         outline: none;
+                        transition: border-color 0.3s ease, box-shadow 0.3s ease;
 
                         &::placeholder {
                             font-size: 13px;
                             color: #9C9EA6;
                             font-style: italic;
                         }
+
+                        &.is-invalid {
+                            border-color: red;
+                            box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+                        }
+
+                        &.is-valid {
+                            border-color: green;
+                            box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+                        }
+
+                        &:hover {
+                            border-color: var(--color-primary);
+                        }
+
+                        &:focus {
+                            border-color: var(--color-accent);
+                            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+                        }
                     }
 
-                    span.form-input-error {
-                        display: none;
+
+                    .input-form-group {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        padding-bottom: 10px;
+
+                        input {
+                            padding: 20px 10px;
+                            border: 1px solid #9C9EA6;
+                            color: var(--color-dark);
+                            outline: none;
+
+                            &::placeholder {
+                                font-size: 13px;
+                                color: #9C9EA6;
+                                font-style: italic;
+                            }
+                        }
+
+                        span.form-input-error {
+                            display: none;
                         }
 
 
@@ -113,25 +149,58 @@
                             display: block;
                             color: red;
                         }
-                   
+                    }
+
+
+                    select {
+                        width: 100%;
+                        padding: 20px 10px;
+                        border: 1px solid #9C9EA6;
+                        color: #535656;
+                        outline: none;
+                        margin-bottom: 10px;
+                    }
+
+                    button {
+                        padding-top: 10px;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
                 }
 
-
-                select {
-                    width: 100%;
+                input, select {
                     padding: 20px 10px;
                     border: 1px solid #9C9EA6;
-                    color: #535656;
+                    color: var(--color-dark);
                     outline: none;
-                    margin-bottom: 10px;
-                }
+                    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 
-                button {
-                    padding-top: 10px;
-                    width: 100%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                    &::placeholder {
+                        font-size: 13px;
+                        color: #9C9EA6;
+                        font-style: italic;
+                    }
+
+                    &.is-invalid {
+                        border-color: red;
+                        box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+                    }
+
+                    &.is-valid {
+                        border-color: green;
+                        box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+                    }
+
+                    &:hover {
+                        border-color: var(--color-primary);
+                    }
+
+                    &:focus {
+                        border-color: var(--color-accent);
+                        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+                    }
                 }
             }
         }

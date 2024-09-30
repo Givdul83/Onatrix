@@ -25,11 +25,42 @@ namespace Onatrix.Controllers
                 ViewData["email"] =form.Email;
                 ViewData["phone"] =form.Phone;
                 
-                ViewData["error-name"] = string.IsNullOrEmpty(form.Name);
-                ViewData["error-email"] = string.IsNullOrEmpty(form.Email);
+                
+                if (string.IsNullOrEmpty(form.Name))
+                {
+                    ViewData["error-name"] = "You must enter your name";
+                }
+                else if (ModelState.ContainsKey(nameof(form.Name)) && ModelState[nameof(form.Name)].Errors.Count > 0)
+                {
+                    ViewData["error-name"] = "Your name must contain at least two characters";
+                }
+
+
+
+                if (string.IsNullOrEmpty(form.Email))
+                {
+                    ViewData["error-email"] = "You must enter your valid email";
+                }
+                else if (ModelState.ContainsKey(nameof(form.Email)) && ModelState[nameof(form.Email)].Errors.Count > 0)
+                {
+                    ViewData["error-email"] = "Invalid email address";
+                }
+
                 ViewData["error-phone"] = string.IsNullOrEmpty(form.Phone);
+
+                if (string.IsNullOrEmpty(form.Name))
+                {
+                    ViewData["error-phone"] = "You must enter your phone";
+                }
+                else if (ModelState.ContainsKey(nameof(form.Phone)) && ModelState[nameof(form.Phone)].Errors.Count > 0)
+                {
+                    ViewData["error-phone"] = "Your phone number must enter a valid phone number";
+                }
+
                 return CurrentUmbracoPage();
             }
+
+
 
             TempData["submitted"] = "We have succesfully recived your info";
             return  RedirectToCurrentUmbracoPage();
