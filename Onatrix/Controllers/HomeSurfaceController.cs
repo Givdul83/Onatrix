@@ -30,7 +30,7 @@ namespace Onatrix.Controllers
                 {
                     ViewData["error-name"] = "You must enter your name";
                 }
-                else if (ModelState.ContainsKey(nameof(form.Name)) && ModelState[nameof(form.Name)].Errors.Count > 0)
+                else if (ModelState.ContainsKey(nameof(form.Name)) && ModelState[nameof(form.Name)]?.Errors.Count > 0)
                 {
                     ViewData["error-name"] = "Your name must contain at least two characters";
                 }
@@ -39,9 +39,9 @@ namespace Onatrix.Controllers
 
                 if (string.IsNullOrEmpty(form.Email))
                 {
-                    ViewData["error-email"] = "You must enter your valid email";
+                    ViewData["error-email"] = "You must enter a valid email";
                 }
-                else if (ModelState.ContainsKey(nameof(form.Email)) && ModelState[nameof(form.Email)].Errors.Count > 0)
+                else if (ModelState.ContainsKey(nameof(form.Email)) && ModelState[nameof(form.Email)]?.Errors.Count > 0)
                 {
                     ViewData["error-email"] = "Invalid email address";
                 }
@@ -50,11 +50,11 @@ namespace Onatrix.Controllers
 
                 if (string.IsNullOrEmpty(form.Name))
                 {
-                    ViewData["error-phone"] = "You must enter your phone";
+                    ViewData["error-phone"] = "You must enter your phone number";
                 }
-                else if (ModelState.ContainsKey(nameof(form.Phone)) && ModelState[nameof(form.Phone)].Errors.Count > 0)
+                else if (ModelState.ContainsKey(nameof(form.Phone)) && ModelState[nameof(form.Phone)]?.Errors.Count > 0)
                 {
-                    ViewData["error-phone"] = "Your phone number must enter a valid phone number";
+                    ViewData["error-phone"] = "Your phone number must be a valid phone number";
                 }
 
                 return CurrentUmbracoPage();

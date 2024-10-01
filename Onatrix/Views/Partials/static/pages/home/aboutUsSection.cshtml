@@ -26,7 +26,7 @@
           
                 <div class="form-content">
                     <p>@Model.Value("aboutUsFormText")</p>
-                @using (Html.BeginUmbracoForm("HandleSubmit", "HomeSurface", FormMethod.Post, new { id = "aboutUsForm", onsubmit = "return validateForm()" }))
+                @using (Html.BeginUmbracoForm("HandleSubmit", "HomeSurface", FormMethod.Post, new { id = "aboutUsForm", onsubmit = "return validateForm()", novalidate = "novalidate" }))
 
                 {
                    
